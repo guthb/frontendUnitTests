@@ -49,8 +49,6 @@ describe('HeroesComponent (shallow test)', () => {
 
   })
 
-
-
   it('should create one li for each hero', () => {
     mockHeroService.getHeroes.and.returnValue(of(HEROES))
     fixture.detectChanges();
