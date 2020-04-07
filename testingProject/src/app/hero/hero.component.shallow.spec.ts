@@ -3,7 +3,6 @@ import { HeroComponent } from './hero.component'
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { By } from '@angular/platform-browser';
 
-
 describe('HeroComponet (shallow test)', () => {
   let fixture: ComponentFixture<HeroComponent>;
 
@@ -32,7 +31,7 @@ describe('HeroComponet (shallow test)', () => {
 
     //expect(fixture.debugElement.query(By.css('a')).nativeElement.textContent).toContain('fred'); //same
 
-    //expect(fixture.nativeElement.querySelector('a').textContent).toContain('fred') //same
+    expect(fixture.nativeElement.querySelector('a').textContent).toContain('fred') //same
   })
 
 })
