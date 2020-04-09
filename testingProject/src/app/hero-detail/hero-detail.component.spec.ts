@@ -37,6 +37,16 @@ describe('HeroDetailComponent', () => {
     fixture.detectChanges();
 
     expect(fixture.nativeElement.querySelector('h2').textContent).toContain('SUPERDUDE');
+  });
+
+  it('should call updateHero when save is called', () => {
+    mockHeroService.updateHero.and.returnValue(of({}));
+    fixture.detectChanges();
+
+
+    fixture.componentInstance.save();
+
+    expect(mockHeroService.updateHero).toHaveBeenCalled();
   })
 
 })
