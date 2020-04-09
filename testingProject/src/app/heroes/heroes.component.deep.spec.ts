@@ -104,7 +104,7 @@ describe('HeroesComponent (deep test)', () => {
 
   });
 
-  it('should have the correct route for the first hero', () => {
+  xit('should have the correct route for the first hero', () => {
     mockHeroService.getHeroes.and.returnValue(of(HEROES));
     fixture.detectChanges();
     const heroComponents = fixture.debugElement.queryAll(By.directive(HeroComponent));
