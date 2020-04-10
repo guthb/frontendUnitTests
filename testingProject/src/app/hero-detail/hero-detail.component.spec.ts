@@ -1,4 +1,4 @@
-import { TestBed, ComponentFixture, fakeAsync, tick } from '@angular/core/testing';
+import { TestBed, ComponentFixture, fakeAsync, tick, flush } from '@angular/core/testing';
 import { HeroDetailComponent } from './hero-detail.component';
 import { HeroService } from '../hero.service';
 import { ActivatedRoute } from '@angular/router';
@@ -56,7 +56,8 @@ describe('HeroDetailComponent', () => {
     fixture.detectChanges();
 
     fixture.componentInstance.save();
-    tick(250);
+    //tick(250);
+    flush();
 
     expect(mockHeroService.updateHero).toHaveBeenCalled();
 
