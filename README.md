@@ -1,2 +1,2 @@
 # frontendUnitTests
-experimenting with unit testing angular and vue
+experimenting with unit testing angular
